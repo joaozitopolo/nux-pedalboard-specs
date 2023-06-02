@@ -11,6 +11,9 @@ devDependencies:
   '@tsconfig/svelte':
     specifier: ^4.0.1
     version: 4.0.1
+  carbon-components-svelte:
+    specifier: ^0.75.1
+    version: 0.75.1
   svelte:
     specifier: ^3.58.0
     version: 3.58.0
@@ -335,6 +338,12 @@ packages:
     engines: {node: '>=6'}
     dev: true
 
+  /carbon-components-svelte@0.75.1:
+    resolution: {integrity: sha512-q1aCDbUW9U8NJMLj/FesL9E2ymqWONWlGDEKoawRtVK7XvsD5ynK1amu2l3cs5mFvagLnkVAcSmyzyTAaie5ug==}
+    dependencies:
+      flatpickr: 4.6.9
+    dev: true
+
   /chokidar@3.5.3:
     resolution: {integrity: sha512-Dr3sfKRP6oTcjf2JmUmFJfeVMvXBdegxB0iVQ5eb2V10uFJUCAS8OByZdVAyVb8xXNz3GjjTgj9kLWsZTqE6kw==}
     engines: {node: '>= 8.10.0'}
@@ -432,6 +441,10 @@ packages:
     engines: {node: '>=8'}
     dependencies:
       to-regex-range: 5.0.1
+    dev: true
+
+  /flatpickr@4.6.9:
+    resolution: {integrity: sha512-F0azNNi8foVWKSF+8X+ZJzz8r9sE1G4hl06RyceIaLvyltKvDl6vqk9Lm/6AUUCi5HWaIjiUbk7UpeE/fOXOpw==}
     dev: true
 
   /fs.realpath@1.0.0:
