@@ -1,12 +1,8 @@
 <script lang="ts">
-  import {
-    Column,
-    ContentSwitcher,
-    Grid,
-    Row,
-    Switch,
-  } from "carbon-components-svelte";
+  import { Column, Grid, Row } from "carbon-components-svelte";
   import type { Board } from "../data/types";
+  import Control from "./ad/atom/Control.svelte";
+  import Detail from "./ad/atom/Detail.svelte";
   export let board: Board;
 </script>
 
@@ -15,8 +11,17 @@
     <Column>AMP EFFECTS</Column>
     <Column>
       {#each board.amps as amp}
-        <div>{amp.label}</div>
-        <div>{amp.name}</div>
+        <Row>
+          <Column padding>
+            <span class={`is-${amp.other ?? "guitar"}`}>
+              {amp.label}
+            </span>
+          </Column>
+          <Column padding>
+            <Detail text={amp.name} />
+            <Control controls={amp.controls} />
+          </Column>
+        </Row>
       {/each}
     </Column>
   </Row>

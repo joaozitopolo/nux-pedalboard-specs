@@ -1,16 +1,18 @@
 export type AmpType = {
     type: 'valve' | 'transistor',
-    valve?: string,
+    valve?: string[],
 }
 
-export type AmpControl = 'level' | 'drive'
+export type AmpControl = 'gain' | 'level' | 'bright' | 'presence' | 'tone' | 'cut' | 'bass' | 'mid' | 'treble' | 'master'
 
 export type AmpEffect = {
     label: string,
-    name: string,
+    name?: string,
+    other?: 'amp_bass' | 'acoustic',
+    channel?: 'clean' | 'crunch' | 'overdrive',
     preamp?: AmpType,
-    amp: AmpType,
-    controls: AmpControl[],
+    amp?: AmpType,
+    controls?: AmpControl[],
     image_url?: string,
     site_url?: string,
 }
